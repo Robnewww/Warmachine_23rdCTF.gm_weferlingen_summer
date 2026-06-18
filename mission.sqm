@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=1269;
+		nextID=1414;
 	};
 	class MarkerIDProvider
 	{
@@ -16,21 +16,22 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1463;
+		nextID=1509;
 	};
 	class Camera
 	{
-		pos[]={38.566204,129.70694,460.64297};
-		dir[]={0.024211295,-0.39895123,0.9166525};
-		up[]={0.010533718,0.9169721,0.39881217};
-		aside[]={0.99965137,-9.3132257e-10,-0.026403522};
+		pos[]={14324.26,223.81242,10483.325};
+		dir[]={0.3096568,-0.50680262,-0.80457836};
+		up[]={0.18206866,0.86201429,-0.47306886};
+		aside[]={-0.93330425,9.3562994e-07,-0.35919785};
 	};
 };
 binarizationWanted=0;
-sourceName="gm_war_machine_nato_1_54";
+sourceName="Warmachine_23rdCTF";
 addons[]=
 {
 	"A3_Modules_F",
+	"c23_retextures",
 	"A3_Ui_F",
 	"gm_characters_ge_characters",
 	"gm_structures_euro_80",
@@ -39,13 +40,14 @@ addons[]=
 	"gm_objects_tents",
 	"gm_objects_barrel",
 	"gm_objects_pallet",
-	"gm_objects_canister"
+	"gm_objects_canister",
+	"ace_compat_gm"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=10;
+		items=12;
 		class Item0
 		{
 			className="A3_Modules_F";
@@ -55,66 +57,78 @@ class AddonsMetaData
 		};
 		class Item1
 		{
+			className="c23_retextures";
+			name="c23_retextures";
+		};
+		class Item2
+		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item2
+		class Item3
 		{
 			className="gm_characters_ge_characters";
 			name="gm_characters_ge_characters";
 			author="Global Mobilization";
 			url="global-mobilization.com";
 		};
-		class Item3
+		class Item4
 		{
 			className="gm_structures_euro_80";
 			name="gm_structures_euro_80";
 			author="Global Mobilization";
 			url="global-mobilization.com";
 		};
-		class Item4
+		class Item5
 		{
 			className="gm_objects_fortification";
 			name="gm_objects_fortification";
 			author="Global Mobilization";
 			url="global-mobilization.com";
 		};
-		class Item5
+		class Item6
 		{
 			className="gm_weapons_ammoboxes";
 			name="gm_weapons_ammoboxes";
 			author="Global Mobilization";
 			url="global-mobilization.com";
 		};
-		class Item6
+		class Item7
 		{
 			className="gm_objects_tents";
 			name="gm_objects_tents";
 			author="Global Mobilization";
 			url="global-mobilization.com";
 		};
-		class Item7
+		class Item8
 		{
 			className="gm_objects_barrel";
 			name="gm_objects_barrel";
 			author="Global Mobilization";
 			url="global-mobilization.com";
 		};
-		class Item8
+		class Item9
 		{
 			className="gm_objects_pallet";
 			name="gm_objects_pallet";
 			author="Global Mobilization";
 			url="global-mobilization.com";
 		};
-		class Item9
+		class Item10
 		{
 			className="gm_objects_canister";
 			name="gm_objects_canister";
 			author="Global Mobilization";
 			url="global-mobilization.com";
+		};
+		class Item11
+		{
+			className="ace_compat_gm";
+			name="ACE3 - GM Compatibility";
+			author="ACE-Team";
+			url="https://ace3.acemod.org/";
 		};
 	};
 };
@@ -140,7 +154,10 @@ dlcs[]=
 randomSeed=11190981;
 class ScenarioData
 {
-	author="Mondkalb";
+	author="Mondkalb & 23rd CTF";
+	overviewText="Warmachine is a persistent Multiplayer game mode similar to Antistasi. Capture zones around a dynamic map, and use money to buy vehicles and equipment until no foe is left standing.";
+	onLoadMission="Warmachine is a persistent Multiplayer game mode similar to Antistasi. Capture zones around a dynamic map, and use money to buy vehicles and equipment until no foe is left standing.";
+	loadScreen="loading_screen.paa";
 	disabledAI=1;
 	respawn=3;
 	respawnDelay=15.000001;
@@ -162,42 +179,10 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
-		{
-			property="RespawnTemplates";
-			expression="true";
-			class Value
-			{
-				class data
-				{
-					singleType="ARRAY";
-					class value
-					{
-						items=2;
-						class Item0
-						{
-							class data
-							{
-								singleType="STRING";
-								value="MenuPosition";
-							};
-						};
-						class Item1
-						{
-							class data
-							{
-								singleType="STRING";
-								value="Counter";
-							};
-						};
-					};
-				};
-			};
-		};
-		class Attribute1
 		{
 			property="RespawnButton";
 			expression="true";
@@ -210,9 +195,75 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=2;
+		class Attribute1
+		{
+			property="ReviveBleedOutDelay";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=150;
+				};
+			};
+		};
+		class Attribute2
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					singleType="ARRAY";
+					class value
+					{
+						items=3;
+						class Item0
+						{
+							class data
+							{
+								singleType="STRING";
+								value="ace_spectator";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								singleType="STRING";
+								value="MenuPosition";
+							};
+						};
+						class Item2
+						{
+							class data
+							{
+								singleType="STRING";
+								value="Counter";
+							};
+						};
+					};
+				};
+			};
+		};
+		class Attribute3
+		{
+			property="ReviveMode";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					singleType="SCALAR";
+					value=1;
+				};
+			};
+		};
+		nAttributes=4;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -236,8 +287,8 @@ class Mission
 	appId=1042220;
 	class Intel
 	{
-		briefingName="CTI40 GM War Machine - NATO";
-		overviewText="v1.54a-14_02_2025";
+		briefingName="GM War Machine - 23rd CTF";
+		overviewText="v1.55-23rdCTF-18.06.26";
 		timeOfChanges=1800.0002;
 		startWeather=0.34999999;
 		startWind=0.1;
@@ -257,7 +308,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=167;
+		items=168;
 		class Item0
 		{
 			dataType="Logic";
@@ -1259,7 +1310,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={17655.063,118.752,12136.822};
+				position[]={17655.062,118.752,12136.822};
 			};
 			id=181;
 			type="LocationVillage_F";
@@ -5466,7 +5517,7 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={2293.6563,110.49126,8245.9219};
+				position[]={2293.6562,110.49126,8245.9219};
 				angles[]={6.2731848,0,0.0039968039};
 			};
 			id=558;
@@ -5804,7 +5855,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3928.9063,131.28789,10087.434};
+						position[]={3928.9062,131.28789,10087.434};
 						angles[]={0.019999012,1.0093966,6.2771854};
 					};
 					side="Empty";
@@ -7244,7 +7295,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={4027.5313,129.74748,10128.834};
+						position[]={4027.5312,129.74748,10128.834};
 						angles[]={0.011995304,2.5360289,6.2711902};
 					};
 					side="Empty";
@@ -8220,7 +8271,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={3973.2119,133.08542,9961.5313};
+						position[]={3973.2119,133.08542,9961.5312};
 						angles[]={0.0099949092,1.2738301,6.2771854};
 					};
 					side="Empty";
@@ -13520,7 +13571,7 @@ class Mission
 					};
 					id=1061;
 					type="gm_barrel";
-					atlOffset=-0.00024414063;
+					atlOffset=-0.00024414062;
 				};
 				class Item13
 				{
@@ -16273,6 +16324,13 @@ class Mission
 			id=1268;
 			type="LocationFOB_F";
 			atlOffset=3.0517578e-05;
+		};
+		class Item167
+		{
+			dataType="Layer";
+			name="Forest House and Small Compound";
+			id=1413;
+			atlOffset=0.0071563721;
 		};
 	};
 	class Connections
