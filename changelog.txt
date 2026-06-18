@@ -1,0 +1,250 @@
+1.53
+* Fixed issue introduced by Arma 3 Patch v. 2.18 
+
+1.52
+* Added desert flecktarn uniform variants to the shop
+
+1.51a
+* Mitigated common explosions in the distance of newly activated zones
+* Added another fail-safe to delete disabled units within 200m of players (should fix the unkillable zone blocking unit)
+* Vehicles can be locked now from farther away
+* Added ability to spawn one single AI assistant per player
+
+1.50b
+* Compatible Attachments now highlighted in the shop
+* Shop highlighting color changed to green
+* Added missing MPiKM and Mp2 magazines to the shop
+* AP ammo magazines now cost double that of regular magazines
+
+1.50a
+* Added 1.5 content
+* Flags now have a little light
+* Increased Night time duration, now lasts 6 times longer
+
+-----------
+
+1.40c
+* Luna launcher is now a one-shot weapon system. It cannot be reloaded.
+
+1.40b
+* Disabled 110mm SF LARS 2 (Too powerful)
+* Disabled BM-21 (Too powerful)
+
+-----------
+1.40a
+* Added M109
+* Added M109G
+* Added 10t mil gl Ammo
+* Added 7t mil gl
+* Added 110mm SF LARS 2
+* Added 2S1
+* Added BM-21
+* Added 2P16
+* Added Biber
+* Added 2t Medical Truck to west german arsenal (We forgot to make it purchasable since the initial release)
+* Added Truck gel. 5 Tractor (We forgot to make it purchasable since the initial release)
+* Added Repair Containers
+* Added new welcome screen
+* Moved supply trucks and containers (Ammo, Repair, Fuel) into a dedicated "Supply" category in the shop
+* Moved BPz2 to new "Engineering" category in the shop
+* Added a few extra locations
+* Randomised starting location
+* Increased price of supply vehicles (Ammo, Fuel, Repair)
+* Ammo trucks now carry a very limited amount of "supply cargo" that can be used to rearm nearby vehicles
+* Vehicles can now change the loadout at nearby ammo trucks (this depletes the available cargo!)
+* Respawn locations are now closer to the shop flags
+* Disconnecting while dead will no longer make your primary weapon disappear when you reconnect
+
+-----------
+1.30
+* Fixed reward for killing cars is now 1000, not 2500
+* Removed enemy AA soldiers with AA launchers
+* Reduced Price of 0.5t Truck, P601 and Typ1200
+* Added UAZ 469
+* Added UAZ 469 DShKM
+* Added UAZ 469 SPG-9
+* Added SPz 1A1+
+* Added SPz 1A1A
+* Added SPz 1A2
+* Added Firetruck
+* Added G36A1
+* Added G36E
+* Added GraPi
+* Added AKM + Pallad
+* Added Pallad-D
+* Added Flecktarn Uniform Clothing Items
+* Added Police and Firebrigade Uniform Items
+* Added New Dust Glasses
+* Added Medi Kits for medics
+* Compatible Ammo for a selected weapon is now highlighted in yellow in the shop
+* Unlocked unarmored enemy vehicles so they can be taken
+
+-----------
+1.26
+* Increased income and rewards for enemies neutralized
+* Destroying Wheeled vehicles now awards money
+
+-----------
+1.25
+* Changed: Introduced a new Dynamic Simulation system to increase game performance (This should fix the occasional onset of a rythmic lag spike every 3-5 seconds)
+
+-----------
+1.24
+* Changed: Reduced P601 price from 1000 to 450
+* Changed: Respawn vehicles can no longer be locked
+* Fixed: The Unflip user action now is only available when a vehicle is not moving
+
+-----------
+1.23
+* Changed: Switched to Altis for a change
+
+-----------
+1.22c
+* Changed: Changed Vehicle Locking locality to prevent it sometimes re-locking vehicles
+* Changed: Vehicles can be unlocked from the inside
+
+-----------
+1.22
+* Changed: Lowered price of explosive charges to 50
+* Changed: Reworked empty-group cleanup
+* Changed: Added logic to prevent spawn containers from disappearing (They were removed because they were destroyed, but still useable)
+* Changed: Increased ATGM helicopter prices
+* Changed: Enemy resistance now scales with server population
+* Changed: Enemy Aircraft no longer change zone occupation to enemy side (Their deployed troops still will when landed)
+* Changed: Reworked vehicle locking to be absolute (not squadleader dependant)
+* Changed: Vehicle locking can now only be done from the outside
+* Changed: Group management and dynamic simulation assignment to increase server FPS.
+* Fixed: Parachutist planes would crash at spawn
+
+-----------
+1.21
+* Added: Vehicles can build camo nets from the outside (not aircraft)
+* Added: Squad Management menu to join other player groups
+* Added: Repair containers
+* Added: More powerful RPG7 (PG-7VL) to make enemy armor less of a problem
+* Changed: Vehicle crews recieve a 100% kill-assist reward now (commanders, drivers, gunners)
+* Changed: Reworked Cash Indicator in the screen corner to not disappear randomly
+* Changed: AI counter attackers to disperse better inside a city
+* Changed: Reworked AT weapons and ammo prices to reflect their efficiency
+* Changed: Structure kills no longer award cash
+* Changed: AK/RPK price for AP ammo increased drastically
+
+-----------
+1.20.5
+* Added: Slingloadable Respawn Point for East Germany
+* Changed: Garbage Collector Behaviour tuned
+
+-----------
+1.20.4
+* Changed: Garbage Collector Bugfix
+* Changed: Helmet Camo to new 1.2 RC classes
+
+-----------
+1.20.3
+* Changed: Midgame performance drop stopped. Enemy counter attacks may be less likely to arrive though.
+* Changed: Camo nets on spawn vehicles no longer collide during toggling a spawnplace
+* Changed: Added secondary trash collector to help out BI's garbage collector.
+
+-----------
+1.20.2
+* Added: Black Wool Hat to East German Shop
+* Added: East German L-410S now acts as a mobile spawn point
+* Added: Camoface and Armpatch Selection menu
+* Changed: Decreased price of Parachutes to 100
+* Changed: Drastically increased Price of Mi-2 URN
+* Changed: Driver again required to toggle Spawnpoints (except where there can't be a driver)
+* Changed: Deployed Spawn Points now create camo nets around them
+* Fixed: Logic to prevent purchases from exploding due to misplacement
+* Fixed: Zones are no longer easily triggered by a slow fly-over
+* Fixed: Flags in cleared towns now change over to fiendly colors
+* Fixed: Face Wear can now be correctly purchased
+* Fixed: Kill reward for tanks
+* Fixed: BRDM2UM now can function as Mobile Spawn Point
+
+-----------
+1.20.1
+* Added: Black hat
+* Added: Cool pilot glasses
+* Added: Woodland helmets
+* Added: Aircraft kill rewards
+* Fixed: vehicle spawn placer limits
+* Changed: Enemy counter attack now heavier
+* Changed: Enemy paradrops now delayed
+* Changed: Center map on shop when map open in purchase
+* Chanded: Reduced West German Spawn Container Price
+
+-----------
+1.20
+* Added: new content from 1.2 update to the mission
+* Changed: Flagpoles now use nation flag textures
+* Changed: Fast travel now allows for deployed MHQs as destination
+* Changed: Fast travel disabled for vehicles
+* Added: Slingloadable Respawn Container for NATO
+* Added: Transfer Funds menu to flag poles
+
+-----------
+1.09
+* Reworked respawn logic
+
+-----------
+1.08
+* Fixed excessive kill reward
+
+-----------
+1.07
+* Moved initial gear saving logic to client side to avoid a potential gear reset due to lag
+* Added static AT launchers to the shop
+* Added M16A1 and A2 to the shop
+* Lowered Rifle Grenade price
+
+-----------
+1.06
+* fixed: Enemy infantry stopped spawning after a while
+* added debug info to check on this fix
+
+-----------
+1.05
+* Gear Bank bugfix
+
+-----------
+1.04
+* Kills from vehicles are no longer paid out to the vehicle commander only
+* Equipment Crates are deleted after 5 minutes.
+* Rearranged enemy forces in strength
+
+-----------
+1.03
+* Fixed time acceleration at night
+* Enemy composition in cities reworked
+* Mitigated gear spawn bugs
+* Added enemy counter attacks
+* Reduced income per kill
+
+-----------
+1.02
+* Added Polish AT Backpack to the shop for the east side
+* Relaxed spawn place finding for vehicle shop
+* Player map icons now change if unit is in vehicle
+* Cities are now guarded by 4 times more dismounted infantry
+* Garrison armored vehicles no longer sit idle
+* Added map indicator for few last remaining enemies in sector
+* Enemy vehicles are now locked, they can no longer be captured
+* Vehicles can now be customized when near a repair truck/tank
+* Added weather control to prevent excessive fog
+* Nighttime is now accelerated by a factor of x120
+* Deployed mobile respawn points are now marked on the map
+* Custom User Actions are now highlighted in bold font
+* Improved the Equipment Shop Interface
+
+-----------
+1.01
+* Increased enemy density
+* Reduced enemy spawn lag
+* Sectors now require ALL enemies to be removed
+* Enabled Medic, Engineer and Explosive-Specialist traits
+* Money transfers indicated in chat
+* Adjusted vehicle costs
+* Changed composition and behaviour of occupied sectors
+* Fixed captured town names not always displayed
+* Removed weapon loadout of start vehicles
+

@@ -1,0 +1,15 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+            "\\.txt$"
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "Users\\Mondkalb\\Documents\\Arma 3\\missions\\gm_warmachine\\gm_war_machine_nato_1_54.gm_weferlingen_summer"
+        }
+    ]
+}

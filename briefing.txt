@@ -1,0 +1,42 @@
+<font face="RobotoCondensedBold">GM WAR MACHINE</font><br />
+<br />
+<font face="RobotoCondensedBold">Objective:</font><br />
+Clear all zones from enemy forces present on the map.<br />
+<br />
+<font face="RobotoCondensedBold">Respawn:</font><br />
+- Cleared zones are available as spawn points.<br />
+- Deployed Command Vehicles are available as respawn and fast-travel locations.<br />
+- Your personal gear is persistent.<br />
+- If you die, you respawn with your previous loadout.<br />
+- If you reconnect to the session at a later point, you will resume with your previous loadout.<br />
+- Flagpoles in friendly zones allow for fast travel.<br />
+<br />
+<font face="RobotoCondensedBold">Gaining Money:</font><br />
+- Capturing zones for the first time awards a big amount of money.<br />
+- Destroying enemy aircraft awards a large amount of money.<br />
+- Destroying enemy tanks awards a medium amount of money.<br />
+- Eliminating enemy forces awards a small amount of money.<br />
+- All vehicle crew members are awarded the same amount of money for eliminating enemies. (Kill Assist Reward)<br />
+- Your current account balance is shown in the bottom right corner of the screen.<br />
+<br />
+<font face="RobotoCondensedBold">Spending Money:</font><br />
+- Locate the flagpoles on the map. They are indicated by a black triangle.<br />
+- If a flag's zone is occupied by friendly forces they can be used to purchase vehicles and equipment, customize appearance and transfer funds to other players.<br />
+- You will automatically be moved into any vehicle you purchase.<br />
+- Purchased equipment will be delivered to a personal crate that you immediately access.<br />
+<br />
+<font face="RobotoCondensedBold">Vehicles:</font><br />
+- Owned vehicles can be locked and unlocked only by you.<br />
+- Command vehicle drivers can deployed the vehicle as mobile spawn point. When deployed, the vehicle cannot be moved.<br />
+- Drive any purchased vehicle close to a repair truck or tank to bring up the vehicle customizer.<br />
+- Enemy vehicles are locked, you cannot capture them.<br />
+- Vehicles can deploy camo nets when stationary. You have to dismount the vehicle to do so.<br />
+<br />
+<font face="RobotoCondensedBold">Enemies:</font><br />
+- Garrison forces occupy enemy zones.<br />
+- Smaller patrol forces travel between zones.<br />
+- Each zone hosts a reaction force that will reinforce nearby zones under attack.<br />
+- The last few remaining units in a city will have one representative highlighted on the map.<br />
+<br /><br />
+<font face="RobotoCondensedBold">Good luck!</font>
+

@@ -1,0 +1,120 @@
+//////////////////////////////////////////
+//
+//  Global Mobilization War Machine
+//
+//  Copyright: Mondkalb, August 2021
+//////////////////////////////////////////
+
+respawn            = 3;
+respawnOnStart     = 1; // do not change: others BI respawn messes with persistent gear
+respawnButton      = 1;
+respawnTemplates[] = {"MenuPosition"};
+
+briefingName = "CTI40 GM War Machine - NATO (v.1.53) - Adjusted for 23rd CTF";
+
+class gm_wfor_init_constants
+{
+	gm_wfor_startingBudget  = 8000;
+	gm_wfor_conquerReward   = 20000;
+
+	gm_wfor_killReward      = 150;
+	gm_wfor_killRewardCar   = 1000;
+	gm_wfor_killRewardTank  = 2500;
+	gm_wfor_killRewardAir   = 5000;
+
+	gm_wfor_killRewardBuilding = -5000;
+
+	gm_wfor_viewDistance    = 2200;
+
+	gm_wfor_basicIncome    = 150;
+	gm_wfor_basicPeriod    = 60; // in seconds between payments
+
+	gm_wfor_currency_symbol = "Cr";
+	gm_wfor_globalBudget    = 0; // 1 for personal accounting, 0 for communism, affects whether vehicles can be locked
+
+	gm_wfor_shipDirect      = 1; // place box directly at player, move player into vehicle
+	gm_wfor_container_large = "gm_AmmoBox_wood_03_empty";
+	gm_wfor_ammoBox_small   = "gm_AmmoBox_wood_03_empty";
+	gm_wfor_shopLocations   = "LocationCamp_F";
+	gm_wfor_supplyLocations = "LocationResupplyPoint_F";
+
+	gm_wfor_shopSide        = "NATO"; // which filter category to show to users
+	gm_wfor_fastTravel      = 1;
+
+	gm_wfor_startLocations  = "LocationFOB_F";
+	gm_wfor_RespawnMarker   = "respawn_west";
+	gm_wfor_startAssets[]   =
+	{
+		{"gm_ge_army_u1300l_cargo", {-40,40,0}},
+		{"gm_ge_army_m113a1g_apc", {-20,40,0}},
+		{"gm_ge_army_kat1_451_cargo", {0,40,0}},
+		{"gm_ge_army_fuchsa0_reconnaissance_wdl", {20,40,0}},
+		{"gm_ge_army_m113a1g_command_oli", {40,40,0}},
+		{"gm_ge_army_shelteraceI_command", {40,-40,0}},
+		{"gm_ge_army_ch53g", {0,-60,0}}
+	};
+
+	// uses isKindOf checks to enable vehicles with this abilitz
+	gm_wfor_builderTypes[]  = {}; // gm_BPz2_base, disabled for War Machine, since its WIP and needs some MP logic worked out
+	gm_wfor_repairTypes[]   = {"gm_ural4320_repair_base", "gm_BPz2a0_base","gm_u1300l_repair_base","gm_ge_army_shelteraceII_repair","gm_gc_army_shelterlakII_repair"};
+	gm_wfor_HQTypes[]       = {"gm_btr60pu12_base","gm_t55ak_base","gm_m113a1dk_command_base", "gm_fuchsa0_command_base","gm_m113a1g_command_base","gm_brdm2um_base","gm_shelteraceI_command_base","gm_l410s_base","gm_shelterlakII_standard_base"};
+	gm_wfor_CamoNetTypes[]  = {"land_gm_camonet_02_nato","land_gm_camonet_03_nato","land_gm_camonet_04_nato"};
+	gm_wfor_ammoVicTypes[]  = {"gm_ge_army_kat1_451_reammo_base","gm_ge_army_kat1_454_reammo_base","gm_ural4320_reammo_base","gm_gc_army_shelterlakII_reammo","gm_ge_army_shelteraceII_reammo"};
+
+	gm_wfor_boldFont        = RobotoCondensedBold;
+};
+
+class gm_efai_init_constants
+{
+	// 0 = East, 1 = West, 2 = Guer
+	// Friendly and Enemy side can't be equal!
+	// System would still function but not behave correctly.
+
+	gm_efai_objectiveTypes  = "LocationVillage_F";
+
+	gm_efai_flag_type        = "flag_armex_f";
+
+	gm_efai_friendly_side    = 1;
+	gm_efai_friendly_color   = "colorBLUFOR";
+	gm_efai_friendly_name    = "23rd CTF";
+	gm_efai_friendly_flags[] = {"23rd_logo\23rd_logo_core\data\flags\23rd_logo_flag_dr_co.paa"};
+
+	gm_efai_enemy_side       = 0;
+	gm_efai_enemy_color      = "colorOPFOR";
+	gm_efai_enemy_name       = "the enemy";
+	gm_efai_enemy_flags[]    = {"gm\gm_core\data\flags\gm_flag_pl_co.paa"};
+
+	gm_efai_zone_radius      = 450;
+
+	gm_efai_dynsim_triggerDistance = 2200;
+	gm_efai_dynsim_locationSize = 1200;
+	gm_efai_dynsim_interval = 15;
+
+	gm_efai_respawnCaptures  = 1; // 1 = allow captured areas to become respawn zones
+};
+
+
+// Functions
+class CfgFunctions
+{
+	#include "wfor_functions.inc"
+	#include "efai_functions.inc"
+};
+
+// Friendly shop templates (and costs)
+#include "wfor_shop_inventory.inc"
+
+// Enemy AI Templates
+class gm_efai
+{
+	// 1) Select Enemy Side forces
+	#define EAST_ENEMY
+	// #define WEST_ENEMY
+
+	// 2) Select Terrain to decide color scheme
+	#define TERRAIN_TEMPERATE
+	// #define TERRAIN_WINTER
+	// #define TERRAIN_DESERT
+
+	#include "efai_grouptemplates.inc"
+};
