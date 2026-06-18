@@ -14,7 +14,7 @@ params ["_logic", "_index"];
 	{
 		_list = list _trg;
 		_mn = ("gm_efai_eh_"+str _index);
-		if ((count _list > 0) and (count _list < 10)) then
+		if ((count _list > 0) and (count _list < 16)) then
 		{
 			if (_logic getVariable ["gm_zoneActive", true]) then
 			{
